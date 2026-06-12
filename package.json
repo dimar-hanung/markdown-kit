@@ -1,0 +1,19 @@
+{
+  "name": "markdown-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Markdown KIT — Chrome extension that renders markdown files from browser URLs",
+  "scripts": {
+    "vendor": "cp node_modules/marked/lib/marked.umd.js lib/marked.js && cp node_modules/github-markdown-css/github-markdown.css styles/ && cp node_modules/mermaid/dist/mermaid.min.js lib/mermaid.min.js && cp node_modules/katex/dist/katex.min.js lib/katex.min.js && cp node_modules/katex/dist/contrib/auto-render.min.js lib/katex-auto-render.min.js && cp node_modules/katex/dist/katex.min.css styles/katex.min.css",
+    "serve": "python samples/serve.py",
+    "start": "npm run serve"
+  },
+  "dependencies": {
+    "@h0rn0chse/dark-mode-toggle": "^2.1.1",
+    "github-markdown-css": "^5.8.1",
+    "katex": "^0.16.22",
+    "lottie-web": "^5.13.0",
+    "marked": "^15.0.12",
+    "mermaid": "^11.6.0"
+  }
+}

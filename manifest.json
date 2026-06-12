@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Markdown KIT",
+  "version": "1.0.0",
+  "description": "Renders markdown files from the current browser URL as formatted HTML.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["webNavigation", "tabs", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*", "file:///*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["file:///*"],
+      "js": [
+        "lib/marked.js",
+        "lib/katex.min.js",
+        "lib/katex-auto-render.min.js",
+        "lib/mermaid.min.js",
+        "lib/markdown-setup.js",
+        "lib/post-render.js",
+        "theme.js",
+        "content.js"
+      ],
+      "css": [
+        "styles/github-markdown.css",
+        "styles/theme.css",
+        "styles/katex.min.css",
+        "styles/viewer.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

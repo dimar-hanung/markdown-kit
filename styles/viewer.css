@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--md-page-bg, #ffffff);
+  color: var(--md-page-fg, #1f2328);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --md-page-bg: #0d1117;
+    --md-page-fg: #f0f6fc;
+  }
+}
+
+.markdown-body.md-viewer {
+  --fontStack-sansSerif: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fgColor-default: var(--md-page-fg, #1f2328);
+  --bgColor-default: var(--md-page-bg, #ffffff);
+  color: var(--fgColor-default);
+  background-color: var(--md-page-bg, #ffffff);
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.markdown-body.md-viewer img {
+  max-width: 100%;
+}
+
+.markdown-body.md-viewer .mermaid {
+  max-width: 100%;
+  margin: 1rem auto;
+  overflow-x: auto;
+  color: initial;
+  background-color: var(--md-page-bg, #ffffff);
+}
+
+.markdown-body.md-viewer .mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-body.md-viewer .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body.md-viewer :not(pre) > code,
+.markdown-body.md-viewer :not(pre) > tt {
+  color: var(--fgColor-accent);
+}
+
+.md-theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--md-toggle-border, #d1d9e0);
+  border-radius: 8px;
+  background-color: var(--md-toggle-bg, #f6f8fa);
+  color: var(--md-toggle-fg, #1f2328);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.md-theme-toggle:hover {
+  background-color: var(--md-toggle-hover, #818b981f);
+}
+
+.md-theme-toggle:focus-visible {
+  outline: 2px solid var(--md-toggle-focus, #0969da);
+  outline-offset: 2px;
+}
+
+.md-theme-toggle svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
