@@ -17,6 +17,16 @@ Open any `.md` link on the web or a local markdown file in Chrome and read it wi
 
 `.md`, `.markdown`, `.mdown`, `.mkdn`, `.mdtxt`, `.mdtext`, `.mkd`, `.mdwn`
 
+## Chrome Web Store
+
+Markdown KIT can be published to the [Chrome Web Store](https://chrome.google.com/webstore). See [docs/CHROME_WEB_STORE.md](docs/CHROME_WEB_STORE.md) for the full checklist, listing copy, and packaging steps.
+
+```bash
+npm run package
+```
+
+Upload the zip from `dist/` in the [Developer Dashboard](https://chrome.google.com/webstore/devconsole).
+
 ## Install
 
 ### From source

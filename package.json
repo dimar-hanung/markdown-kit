@@ -6,7 +6,8 @@
   "scripts": {
     "vendor": "cp node_modules/marked/lib/marked.umd.js lib/marked.js && cp node_modules/github-markdown-css/github-markdown.css styles/ && cp node_modules/mermaid/dist/mermaid.min.js lib/mermaid.min.js && cp node_modules/katex/dist/katex.min.js lib/katex.min.js && cp node_modules/katex/dist/contrib/auto-render.min.js lib/katex-auto-render.min.js && cp node_modules/katex/dist/katex.min.css styles/katex.min.css",
     "serve": "python samples/serve.py",
-    "start": "npm run serve"
+    "start": "npm run serve",
+    "package": "node scripts/package-extension.js"
   },
   "dependencies": {
     "@h0rn0chse/dark-mode-toggle": "^2.1.1",
